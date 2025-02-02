@@ -24,7 +24,7 @@ in
       specialArgs = {
         inherit inputs;
         vars = import ./hosts/vars.nix;
-      }
+      };
       modules = [
         ./hosts/common
         ./hosts/${machineHostname}
