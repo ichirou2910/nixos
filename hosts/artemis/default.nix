@@ -32,7 +32,7 @@
     ../common/optional/zerotier.nix
 
     # You can also split up your configuration and import pieces of it here:
-    ../common/users/ichirou2910
+    ../common/users/ichirou
 
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
@@ -92,7 +92,7 @@
 
   # Enable automatic login for the user.
   services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "ichirou2910";
+  services.displayManager.autoLogin.user = "ichirou";
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.05";

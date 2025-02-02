@@ -25,12 +25,7 @@
     ../common/optional/fcitx.nix
     ../common/optional/kde.nix
     ../common/optional/pipewire.nix
-#     ../common/optional/systemd-boot.nix
     ../common/optional/grub.nix
-    ../common/optional/zerotier.nix
-
-    # You can also split up your configuration and import pieces of it here:
-    ../common/users/ichirou2910
 
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
@@ -74,7 +69,7 @@
 
   # Enable automatic login for the user.
   services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "ichirou2910";
+  services.displayManager.autoLogin.user = "ichirou";
 
   services.qemuGuest.enable = true;
   services.spice-vdagentd.enable = true;

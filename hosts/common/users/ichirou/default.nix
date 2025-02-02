@@ -6,7 +6,7 @@
 }: let
   ifTheyExist = groups: builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
 in {
-  users.users.ichirou2910 = {
+  users.users.ichirou = {
     isNormalUser = true;
     description = "Le Anh Dung";
     openssh.authorizedKeys.keys = [
@@ -24,8 +24,8 @@ in {
     useDefaultShell = true;
     ignoreShellProgramCheck = true;
 
-    # hashedPasswordFile = config.sops.secrets.ichirou2910-password.path;
+    # hashedPasswordFile = config.sops.secrets.ichirou-password.path;
   };
 
-  # home-manager.users.ichirou2910 = import ../../../../home/ichirou2910/${config.networking.hostName}.nix;
+  # home-manager.users.ichirou = import ../../../../home/ichirou/${config.networking.hostName}.nix;
 }
