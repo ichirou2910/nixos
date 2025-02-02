@@ -34,6 +34,6 @@ in
             inputs.nixpkgs.lib.mkForce "/home/ichirou";
         })
       ] ++ extraModules;
-    }
+    };
   };
 }
