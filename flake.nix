@@ -40,15 +40,6 @@
     let
       helpers = import ./helper.nix inputs;
       inherit (helpers) mkMerge mkNixos;
-
-      inherit (self) outputs;
-      # Supported systems for your flake packages, shell, etc.
-      systems = [
-        "x86_64-linux"
-      ];
-      # This is a function that generates an attribute by calling a function you
-      # pass to it, with each system as an argument
-      forAllSystems = nixpkgs.lib.genAttrs systems;
     in
     mkMerge [
       # VM
