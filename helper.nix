@@ -26,6 +26,7 @@ in
         vars = import ./hosts/vars.nix;
       };
       modules = [
+        ./hosts/common
         ./hosts/${machineHostname}
         ./users/ichirou
         (inputs.nixpkgs.lib.attrsets.recursiveUpdate (homeManagerCfg true extraHmModules) {
