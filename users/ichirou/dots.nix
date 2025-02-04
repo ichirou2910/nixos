@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 let
   home = {
     username = "ichirou";
@@ -28,10 +28,10 @@ in
   ];
 
   programs.vscode = {
-    enable = true;
-    extensions = with pkgs.vscode-extensions; [
-        vscodevim.vim
-    ];
+      enable = true;
+      extensions = with pkgs.vscode-extensions; [
+          vscodevim.vim
+      ];
   };
 
   programs.nix-index = {
