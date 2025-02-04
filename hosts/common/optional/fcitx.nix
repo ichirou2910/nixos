@@ -1,7 +1,8 @@
 { config, pkgs, ... }:
 {
   i18n.inputMethod = {
-    enabled = "fcitx5";
+    enabled = true;
+    type = "fcitx5";
     fcitx5 = {
       waylandFrontend = true;
       plasma6Support = true;
