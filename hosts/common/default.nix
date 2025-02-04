@@ -8,7 +8,6 @@
   imports = [
     ./brave.nix
     ./fonts.nix
-    ./syncthing.nix
   ];
 
   # Bootloader
@@ -31,6 +30,13 @@
       PasswordAuthentication = false;
     };
   };
+
+  # Syncthing
+  services.syncthing = {
+    enable = true;
+    openDefaultPorts = true;
+  };
+  systemd.services.syncthing.environment.STNODEFAULTFOLDER = "true";
 
   # Pipewire
   hardware.pulseaudio.enable = false;
