@@ -9,8 +9,6 @@
     ../common/docker.nix
     ../common/fcitx.nix
     ../common/nvidia.nix
-    ../common/pipewire.nix
-    ../common/systemd-boot.nix
 
     ./hardware-configuration.nix
   ];
