@@ -28,10 +28,15 @@
   };
 
   qt = {
-    style.package = [
+    enable = true;
+    style.package = with pkgs; [
+      kdePackages.kio
+      kdePackages.plasma-integration
+      kdePackages.systemsettings
       inputs.lightly.packages.${pkgs.system}.darkly-qt5
       inputs.lightly.packages.${pkgs.system}.darkly-qt6
     ];
-    platformTheme.name = "qtct";
+    # platformTheme.name = "kde";
+    style.name = "breeze";
   };
 }
