@@ -9,19 +9,15 @@
   };
 
   home.packages = with pkgs; [
-    # lsp
-    roslyn-ls
-    lua-language-server
-    nodePackages_latest.typescript-language-server
-
-    # debugger
-    netcoredbg
-
-    # formater/linter
     csharpier
-    stylua
-    shfmt
     eslint_d
+    lua-language-server
+    netcoredbg
+    nodejs
+    nodePackages_latest.typescript-language-server
     prettierd
+    roslyn-ls
+    shfmt
+    stylua
   ];
 }
