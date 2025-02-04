@@ -32,9 +32,6 @@
   # Enable bluetooth
   hardware.bluetooth.enable = true;
 
-  # Kitty overrides
-  programs.kitty.font.size = lib.mkForce 11.5;
-
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.05";
 }
