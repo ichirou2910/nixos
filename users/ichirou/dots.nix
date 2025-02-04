@@ -19,10 +19,11 @@ in
   home = home;
 
   imports = [
-    ../../dots/git/default.nix
-    ../../dots/kde/default.nix
-    ../../dots/nvim/default.nix
-    ../../dots/zsh/default.nix
+    ../../dots/brave
+    ../../dots/git
+    ../../dots/kde
+    ../../dots/nvim
+    ../../dots/zsh
     ./packages.nix
   ];
 
