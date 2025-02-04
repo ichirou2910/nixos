@@ -1,4 +1,7 @@
 {pkgs, lib, ...}: 
+let
+  win-fonts = pkgs.callPackage ../../pkgs/win-fonts.nix { };
+in
 {
   fonts = {
     packages = with pkgs; [
