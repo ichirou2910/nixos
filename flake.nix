@@ -46,13 +46,6 @@
       inherit (helpers) mkMerge mkNixos;
     in
     mkMerge [
-      # VM
-      (mkNixos "hades" inputs.nixpkgs 
-        [ ]
-        [
-          dots/kitty
-        ]
-      )
       # Inspiron
       (mkNixos "artemis" inputs.nixpkgs 
         [ ]

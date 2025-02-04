@@ -6,11 +6,11 @@
   ...
 }: {
   imports = [
-    ../common/optional/docker.nix
-    ../common/optional/fcitx.nix
-    ../common/optional/nvidia.nix
-    ../common/optional/pipewire.nix
-    ../common/optional/systemd-boot.nix
+    ../common/docker.nix
+    ../common/fcitx.nix
+    ../common/nvidia.nix
+    ../common/pipewire.nix
+    ../common/systemd-boot.nix
 
     ./hardware-configuration.nix
   ];
@@ -33,6 +33,9 @@
 
   # Enable bluetooth
   hardware.bluetooth.enable = true;
+
+  # Kitty overrides
+  programs.kitty.font.size = lib.mkForce 11.5;
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.05";
