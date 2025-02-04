@@ -29,6 +29,7 @@ in
         ./hosts/common
         ./hosts/${machineHostname}
         ./users/ichirou
+        inputs.home-manager.nixosModules.home-manager
         (inputs.nixpkgs.lib.attrsets.recursiveUpdate (homeManagerCfg true extraHmModules) {
           home-manager.users.ichirou.home.homeDirectory =
             inputs.nixpkgs.lib.mkForce "/home/ichirou";
