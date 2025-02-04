@@ -9,6 +9,7 @@
     fastfetch.enable = true;
     firefox.enable = true;
     fzf.enable = true;
+    kdeconnect.enable = true;
     nnn.enable = true;
   };
 }

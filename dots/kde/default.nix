@@ -3,7 +3,6 @@
   imports = [
     ./fonts.nix
     ./hotkeys.nix
-    ./kdeconnect.nix
     ./panels.nix
     ./workspace.nix
   ];
