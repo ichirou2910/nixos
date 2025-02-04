@@ -58,8 +58,9 @@
     fzf.enable = true;
     nnn.enable = true;
   };
-
   environment.systemPackages = with pkgs; [
+    dotnetCorePackages.sdk_6_0
+    dotnetCorePackages.sdk_8_0
     alejandra
     atool
     bash
