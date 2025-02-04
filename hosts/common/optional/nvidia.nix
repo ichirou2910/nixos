@@ -1,6 +1,6 @@
 { config, lib, pkgs, ... }: {
   # Enable graphics driver
-  # hardware.graphics.enable = true;
+  hardware.graphics.enable = true;
 
   # Load "nvidia" driver for Xorg and Wayland
   services.xserver.videoDrivers = ["nvidia"];
@@ -28,10 +28,6 @@
     # Only available from driver 515.43.04+
     # Currently "beta quality", so false is currently the recommended setting.
     open = false;
-
-    # Enable the Nvidia settings menu,
-    # accessible via `nvidia-settings`.
-    nvidiaSettings = true;
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
     package = config.boot.kernelPackages.nvidiaPackages.stable;
