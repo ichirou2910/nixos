@@ -39,6 +39,22 @@
       '';
     };
   };
+  systemd.user.services.wireguard = {
+    enable = true;
+    wantedBy = ["default.target"];
+    after = ["network-online.target"];
+    description = "Connect to WireGuard VPN (Home) after internet is available";
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = ''
+        ${pkgs.bash}/bin/bash -c 'until ping -c 1 -W 1 8.8.8.8; do sleep 2; done; nmcli connection up wg0'
+      '';
+      ExecStop= ''
+        ${pkgs.networkmanager}/bin/nmcli connection down wg0
+      '';
+      RemainAfterExit=true;
+    };
+  };
 
   home-manager.users.ichirou.xdg.configFile = {
     "kdeconnect/config" = {
