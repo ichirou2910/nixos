@@ -6,7 +6,6 @@
 }:
 {
   imports = [
-    ./kde
     ./brave.nix
     ./fonts.nix
     ./syncthing.nix

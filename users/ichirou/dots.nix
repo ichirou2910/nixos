@@ -20,6 +20,7 @@ in
 
   imports = [
     ../../dots/git/default.nix
+    ../../dots/kde/default.nix
     ../../dots/nvim/default.nix
     ../../dots/zsh/default.nix
     ./packages.nix
