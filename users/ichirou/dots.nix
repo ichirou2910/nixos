@@ -19,10 +19,18 @@ in
   home = home;
 
   imports = [
-    ../../dots/zsh/default.nix
+    ../../dots/git/default.nix
     ../../dots/nvim/default.nix
+    ../../dots/zsh/default.nix
     ./packages.nix
   ];
+
+  programs.vscode = {
+      enable = true;
+      extensions = with pkgs.vscode-extensions; [
+          vscodevim.vim
+      ];
+  };
 
   programs.nix-index = {
     enable = true;

@@ -9,9 +9,7 @@
     ./kde
     ./brave.nix
     ./fonts.nix
-    ./git.nix
     ./syncthing.nix
-    ./vscode.nix
   ];
 
   # Bootloader
