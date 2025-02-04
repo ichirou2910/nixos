@@ -11,6 +11,9 @@ let
     ] ++ extraImports;
     home-manager.backupFileExtension = "bak";
     home-manager.useUserPackages = userPackages;
+    home-manager.sharedModules = [
+      inputs.plasma-manager.homeManagerModules.plasma-manager
+    ];
   };
 in
 {
