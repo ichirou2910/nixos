@@ -45,18 +45,6 @@
     pulse.enable = true;
   };
 
-  programs = {
-    bash.enable = true;
-    bat.enable = true;
-    direnv = {
-      enable = true;
-      nix-direnv.enable = true;
-    };
-    fastfetch.enable = true;
-    firefox.enable = true;
-    fzf.enable = true;
-    nnn.enable = true;
-  };
   environment.systemPackages = with pkgs; [
     dotnetCorePackages.sdk_6_0
     dotnetCorePackages.sdk_8_0
