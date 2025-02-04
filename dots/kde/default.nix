@@ -32,6 +32,6 @@
       inputs.lightly.packages.${pkgs.system}.darkly-qt5
       inputs.lightly.packages.${pkgs.system}.darkly-qt6
     ];
-    platformTheme.name = "qtct"
-  }
+    platformTheme.name = "qtct";
+  };
 }
