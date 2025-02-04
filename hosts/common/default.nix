@@ -75,7 +75,7 @@
     tmux
     vesktop
     yadm
-  ]
+  ];
 
   nixpkgs = {
     config = {
