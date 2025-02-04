@@ -37,6 +37,13 @@
   };
   systemd.services.syncthing.environment.STNODEFAULTFOLDER = "true";
 
+  # KDE Plasma
+  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
+  services.displayManager.defaultSession = "plasma";
+  services.desktopManager.plasma6.enable = true;
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "ichirou";
   # KDE Connect
   networking.firewall = rec {
     allowedTCPPortRanges = [{ from = 1714; to = 1764; }];
