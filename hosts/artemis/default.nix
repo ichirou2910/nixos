@@ -17,6 +17,14 @@
   networking = {
     networkmanager.enable = true;
     hostName = "artemis";
+  home-manager.users.ichirou.xdg.configFile = {
+    "kdeconnect/config" = {
+      source = pkgs.writeText "config" ''
+        [General]
+        name=artemis
+        customDevices=10.0.0.3,10.0.0.4,10.0.0.5
+      '';
+    };
   };
 
   # NVIDIA Prime
