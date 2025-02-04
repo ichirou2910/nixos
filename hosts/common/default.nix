@@ -74,6 +74,7 @@
     distrobox
     eza
     fd
+    gcc
     htop
     inetutils
     jq
