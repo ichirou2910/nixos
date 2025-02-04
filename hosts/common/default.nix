@@ -1,4 +1,9 @@
-{ ... }:
+{
+  inputs,
+  pkgs,
+  lib,
+  ...
+}:
 {
   imports = [
     ./kde
