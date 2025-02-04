@@ -1,7 +1,11 @@
 { pkgs, ... } :
 {
   programs.plasma.workspace = {
-    cursor.theme = "Breeze";
+    colorScheme = "BreezeDark";
     splashScreen.theme = "None";
+    windowDecorations = {
+      library = "org.kde.darkly";
+      theme = "Darkly";
+    };
   };
 }

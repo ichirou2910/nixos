@@ -26,4 +26,12 @@
 
     "kwinrc"."Wayland"."InputMethod[$e]" = "/run/current-system/sw/share/applications/fcitx5-wayland-launcher.desktop";
   };
+
+  qt = {
+    style.package = [
+      inputs.lightly.packages.${pkgs.system}.darkly-qt5
+      inputs.lightly.packages.${pkgs.system}.darkly-qt6
+    ];
+    platformTheme.name = "qtct"
+  }
 }
