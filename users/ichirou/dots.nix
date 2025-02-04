@@ -19,6 +19,8 @@ in
   home = home;
 
   imports = [
+    ../../dots/zsh/default.nix
+    ../../dots/nvim/default.nix
     ./packages.nix
   ];
 

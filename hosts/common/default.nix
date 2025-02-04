@@ -10,7 +10,6 @@
     ./brave.nix
     ./fonts.nix
     ./git.nix
-    ./nvim.nix
     ./syncthing.nix
     ./vscode.nix
   ];
