@@ -60,13 +60,7 @@
     pulse.enable = true;
   };
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "dotnet-sdk-6.0.428"
-  ];
-
   environment.systemPackages = with pkgs; [
-    dotnetCorePackages.sdk_6_0
-    dotnetCorePackages.sdk_8_0
     alejandra
     atool
     bash

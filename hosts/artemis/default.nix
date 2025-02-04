@@ -13,6 +13,16 @@
     ./hardware-configuration.nix
   ];
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "dotnet-sdk-6.0.428"
+  ];
+
+  environment.systemPackages = with pkgs; [
+    dotnetCorePackages.sdk_6_0
+    dotnetCorePackages.sdk_8_0
+    jetbrains.rider
+  ];
+
   # Enable networking
   networking = {
     networkmanager.enable = true;
