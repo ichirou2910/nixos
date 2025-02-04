@@ -37,6 +37,12 @@
   };
   systemd.services.syncthing.environment.STNODEFAULTFOLDER = "true";
 
+  # KDE Connect
+  networking.firewall = {
+    allowedTCPPortRanges = [{ from = 1714; to = 1764; }];
+    allowedUDPPortRanges = [{ from = 1714; to = 1764; }];
+  };
+
   # Pipewire
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
