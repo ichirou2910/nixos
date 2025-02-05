@@ -20,5 +20,9 @@
       family = "Segoe UI";
       pointSize = 10;
     };
+    windowTitle = {
+      family = "Segoe UI";
+      pointSize = 10;
+    };
   };
 }
