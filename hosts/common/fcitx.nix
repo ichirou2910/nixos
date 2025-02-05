@@ -15,7 +15,7 @@
         };
         globalOptions = {
           "Hotkey/TriggerKeys" = {
-            "0" = "Control+Shift";
+            "0" = "Control+Space";
           };
           "Hotkey/AltTriggerKeys" = {
             "0" = "";

@@ -24,7 +24,7 @@
     "kdeglobals"."General"."TerminalApplication" = "kitty";
     "kdeglobals"."General"."TerminalService" = "kitty.desktop";
 
-    "kwinrc"."Wayland"."InputMethod[$e]" = "/run/current-system/sw/share/applications/fcitx5-wayland-launcher.desktop";
+    "kwinrc"."Wayland"."InputMethod[$e]" = "/run/current-system/sw/share/applications/org.fcitx.Fcitx5.desktop";
   };
 
   qt = {
