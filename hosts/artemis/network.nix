@@ -23,11 +23,12 @@
     enable = true;
     wantedBy = ["default.target"];
     after = ["network-online.target"];
-    description = "Connect to WireGuard VPN (Home) after internet is available";
+    wants = ["network-online.target"];
+    description = "Connect to WireGuard VPN after internet is available";
     serviceConfig = {
       Type = "oneshot";
       ExecStart = ''
-        ${pkgs.bash}/bin/bash -c 'until ping -c 1 -W 1 8.8.8.8; do sleep 2; done; nmcli connection up wg0'
+        ${pkgs.bash}/bin/bash -c 'until ${pkgs.iputils}/bin/ping -c 1 -W 1 8.8.8.8; do sleep 2; done; ${pkgs.networkmanager}/bin/nmcli connection up wg0'
       '';
       ExecStop= ''
         ${pkgs.networkmanager}/bin/nmcli connection down wg0
