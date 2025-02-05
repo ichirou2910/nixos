@@ -27,6 +27,15 @@
     "kwinrc"."Wayland"."InputMethod[$e]" = "/run/current-system/sw/share/applications/org.fcitx.Fcitx5.desktop";
   };
 
+  # workaround tray.target
+  # https://github.com/nix-community/home-manager/issues/2064
+  systemd.user.targets.tray = {
+		Unit = {
+			Description = "Home Manager System Tray";
+			Requires = [ "graphical-session-pre.target" ];
+		};
+	};
+
   qt = {
     enable = true;
     style.package = with pkgs; [
@@ -36,7 +45,6 @@
       inputs.lightly.packages.${pkgs.system}.darkly-qt5
       inputs.lightly.packages.${pkgs.system}.darkly-qt6
     ];
-    # platformTheme.name = "kde";
     style.name = "breeze";
   };
 }
