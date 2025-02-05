@@ -17,6 +17,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
+    brave
     dotnetCorePackages.sdk_6_0
     dotnetCorePackages.sdk_8_0
     jetbrains.rider

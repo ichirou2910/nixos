@@ -5,7 +5,7 @@
     "kwin"."Window Close" = ["Meta+Q" "Alt+F4,Alt+F4,Close Window"];
 
     # Set Meta+W to Brave shortcut
-    "kwin"."Overview" = ",Meta+W,Toggle Overview";
+    "kwin"."Overview" = "none";
     "services/brave-browser.desktop"."_launch" = "Meta+W";
 
     "services/kitty.desktop"."_launch" = "Meta+Return";

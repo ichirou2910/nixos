@@ -19,7 +19,6 @@ in
   home = home;
 
   imports = [
-    ../../dots/brave
     ../../dots/git
     ../../dots/kde
     ../../dots/nvim
