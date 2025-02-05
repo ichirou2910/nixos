@@ -20,6 +20,8 @@
 
   programs.plasma.enable = true;
   programs.plasma.configFile = {
+    "kdeglobals"."General"."AccentColor" = "146,110,228";
+
     "kdeglobals"."General"."BrowserApplication" = "brave-browser.desktop";
     "kdeglobals"."General"."TerminalApplication" = "kitty";
     "kdeglobals"."General"."TerminalService" = "kitty.desktop";
