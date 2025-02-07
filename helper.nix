@@ -32,6 +32,9 @@ in
         ./hosts/common
         ./hosts/${machineHostname}
         ./users/ichirou
+        inputs.nixos-hardware.nixosModules.common-pc-laptop
+        inputs.nixos-hardware.nixosModules.common-pc-laptop-ssd
+        inputs.nixos-hardware.nixosModules.common-cpu-intel
         inputs.home-manager.nixosModules.home-manager
         (inputs.nixpkgs.lib.attrsets.recursiveUpdate (homeManagerCfg false extraHmModules) {
           home-manager.users.ichirou.home.homeDirectory =
