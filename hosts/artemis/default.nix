@@ -21,6 +21,15 @@
     dotnetCorePackages.sdk_6_0
     dotnetCorePackages.sdk_8_0
     jetbrains.rider
+    kdePackages.krfb
+    (retroarch.override {
+      cores = with libretro; [
+        gambatte
+        mgba
+        snes9x
+        swanstation
+      ];
+    })
   ];
 
   home-manager.users.ichirou.xdg.configFile = {

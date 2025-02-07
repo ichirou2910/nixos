@@ -1,12 +1,21 @@
 { input, lib, pkgs, ... }: {
   programs = {
-    steam.enable = true;
-    steam.gamescope.enable = true;
+    gamescope = {
+      enable = true;
+      capSysNice = true;
+    };
+    steam = {
+      enable = true;
+      remotePlay.openFirewall = true;
+      localNetworkGameTransfers.openFirewall = true;
+      gamescopeSession.enable = true;
+    };
     gamemode.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
-    mangohud
     bottles
+    mangohud
+    torzu
   ];
-};
+}
