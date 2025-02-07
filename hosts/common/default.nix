@@ -33,7 +33,24 @@
   # Syncthing
   services.syncthing = {
     enable = true;
+    user = "ichirou";
+    dataDir = "/home/ichirou";
+    configDir = "/home/ichirou/.config/syncthing";
     openDefaultPorts = true;
+    settings = {
+      devices = {
+        "ares" = { id = "V4EBFRS-YZE26P2-NOWDU43-IGBNGCA-ZM4FJ7X-3JXLKRL-JRC6SQ6-BVZU5AL"; };
+        "artemis" = { id = "AYXRNZW-GNGFPBW-T43UBGI-KU2DX4Q-JKWHGTX-5QOUBXH-RXZRH3K-SPCC6AF"; };
+        "syncthing" = { id = "4GREEPA-XQJA4IL-FUBEJTG-PSABT47-5ECVUR7-3G6W3DO-V7Y32UK-BF7VYAE"; };
+      };
+      folders = {
+        "Ryujinx" = {
+          id = "orqvn-yh62h";
+          path = "/home/ichirou/.config/Ryujinx/bis/user";
+          devices = ["ares" "artemis" "syncthing"];
+        };
+      };
+    };
   };
   systemd.services.syncthing.environment.STNODEFAULTFOLDER = "true";
 
