@@ -42,7 +42,7 @@
       inputs.home-manager.follows = "home-manager";
     };
     secrets = {
-      url = "git+ssh://git@github.com/ichirou2910/nix-private.git";
+      url = "git+ssh://git@github.com/ichirou2910/nix-private.git?ref=main";
       flake = false;
     };
   };

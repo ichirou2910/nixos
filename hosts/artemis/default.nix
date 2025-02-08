@@ -58,6 +58,11 @@
           path = "/home/ichirou/.config/Ryujinx/bis/user";
           devices = ["ares" "artemis" "syncthing"];
         };
+        "Yuzu" = {
+          id = "zncgi-ffzm2";
+          path = "/home/ichirou/Games/Emulation/storage/yuzu/nand";
+          devices = ["ares" "artemis" "syncthing"];
+        };
       };
     };
   };

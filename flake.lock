@@ -229,7 +229,25 @@
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable",
-        "plasma-manager": "plasma-manager"
+        "plasma-manager": "plasma-manager",
+        "secrets": "secrets"
+      }
+    },
+    "secrets": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1738984027,
+        "narHash": "sha256-R6ZHD39mbqufNB7ecpkKeJCyLCsCMZFO7Ip6w/Sz25E=",
+        "ref": "main",
+        "rev": "b72c03b5049c2b01d713439eb4cc8bfeaae8b3b6",
+        "revCount": 1,
+        "type": "git",
+        "url": "ssh://git@github.com/ichirou2910/nix-private.git"
+      },
+      "original": {
+        "ref": "main",
+        "type": "git",
+        "url": "ssh://git@github.com/ichirou2910/nix-private.git"
       }
     },
     "systems": {
