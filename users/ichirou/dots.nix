@@ -21,6 +21,7 @@ in
   imports = [
     ../../dots/git
     ../../dots/kde
+    ../../dots/kitty
     ../../dots/nvim
     ../../dots/zsh
     ./packages.nix

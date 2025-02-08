@@ -88,6 +88,7 @@
     gcc
     htop
     inetutils
+    inputs.agenix.packages."${system}".default
     jq
     pciutils
     unzip

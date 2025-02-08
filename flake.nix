@@ -13,12 +13,9 @@
     ];
   };
   inputs = {
-    # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-
-    # Home manager
     home-manager = {
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -27,7 +24,10 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
-
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -36,8 +36,6 @@
       url = "github:Bali10050/Darkly";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # Plasma manager
     plasma-manager = {
       url = "github:nix-community/plasma-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -53,10 +51,13 @@
     mkMerge [
       # Inspiron
       (mkNixos "artemis" inputs.nixpkgs 
-        [ ]
-        [
-          dots/kitty
+        [ 
+          inputs.nixos-hardware.nixosModules.common-pc-laptop
+          inputs.nixos-hardware.nixosModules.common-pc-laptop-ssd
+          inputs.nixos-hardware.nixosModules.common-cpu-intel
+          ./users/ichirou/gaming.nix
         ]
+        [ ]
       )
     ];
 }

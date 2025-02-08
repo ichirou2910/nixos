@@ -6,6 +6,7 @@ let
       inherit inputs;
     };
     home-manager.users.ichirou.imports = [
+      inputs.agenix.homeManagerModules.default
       inputs.nix-index-database.hmModules.nix-index
       ./users/ichirou/dots.nix
     ] ++ extraImports;
@@ -32,10 +33,7 @@ in
         ./hosts/common
         ./hosts/${machineHostname}
         ./users/ichirou
-        ./users/ichirou/gaming.nix
-        inputs.nixos-hardware.nixosModules.common-pc-laptop
-        inputs.nixos-hardware.nixosModules.common-pc-laptop-ssd
-        inputs.nixos-hardware.nixosModules.common-cpu-intel
+        inputs.agenix.nixosModules.default
         inputs.home-manager.nixosModules.home-manager
         (inputs.nixpkgs.lib.attrsets.recursiveUpdate (homeManagerCfg false extraHmModules) {
           home-manager.users.ichirou.home.homeDirectory =
