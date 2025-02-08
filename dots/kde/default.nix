@@ -3,7 +3,6 @@
   imports = [
     ./fonts.nix
     ./hotkeys.nix
-    ./kdeconnect.nix
     ./panels.nix
     ./workspace.nix
   ];
@@ -37,6 +36,12 @@
 			Requires = [ "graphical-session-pre.target" ];
 		};
 	};
+
+  services.kdeconnect = {
+    enable = true;
+    indicator = false;
+    package = pkgs.kdePackages.kdeconnect-kde;
+  };
 
   qt = {
     enable = true;
