@@ -28,6 +28,7 @@
       url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -56,6 +57,7 @@
       # Inspiron
       (mkNixos "artemis" inputs.nixpkgs 
         [ 
+          inputs.nix-flatpak.nixosModules.nix-flatpak
           inputs.nixos-hardware.nixosModules.common-pc-laptop
           inputs.nixos-hardware.nixosModules.common-pc-laptop-ssd
           inputs.nixos-hardware.nixosModules.common-cpu-intel

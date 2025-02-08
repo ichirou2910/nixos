@@ -31,6 +31,17 @@
     })
   ];
 
+  services.flatpak = {
+    enable = true;
+    packages = [
+      "net.retrodeck.retrodeck"
+    ];
+  };
+  home-manager.users.ichirou.xdg.systemDirs.data = [
+    "/var/lib/flatpak/exports/share"
+    "/home/ichirou/.local/share/flatpak/exports/share"
+  ];
+
   home-manager.users.ichirou.xdg.configFile = {
     "kdeconnect/config" = {
       source = pkgs.writeText "config" ''
