@@ -45,6 +45,23 @@
     enable = true;
   };
 
+  # Syncthing (host specific)
+  age.secrets.syncthing_cert.file = "${inputs.secrets}/artemis_syncthing.cert.age";
+  age.secrets.syncthing_key.file = "${inputs.secrets}/artemis_syncthing.key.age";
+  services.syncthing = {
+    cert = config.age.secrets.syncthing_cert.path;
+    key = config.age.secrets.syncthing_key.path;
+    settings = {
+      folders = {
+        "Ryujinx" = {
+          id = "orqvn-yh62h";
+          path = "/home/ichirou/.config/Ryujinx/bis/user";
+          devices = ["ares" "artemis" "syncthing"];
+        };
+      };
+    };
+  };
+
   # Enable bluetooth
   hardware.bluetooth.enable = true;
 

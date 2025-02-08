@@ -41,6 +41,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+    secrets = {
+      url = "git+ssh://git@github.com/ichirou2910/nix-private.git";
+      flake = false;
+    };
   };
 
   outputs = { ... }@inputs: 
