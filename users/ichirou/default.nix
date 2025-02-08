@@ -9,12 +9,17 @@ in
 {
   nix.settings.trusted-users = [ "ichirou" ];
 
+  age.secrets.hashedUserPassword = {
+    file = "${inputs.secrets}/hashedUserPassword.age";
+  };
+
   users = {
     users = {
       ichirou = {
         shell = pkgs.zsh;
         uid = 1000;
         isNormalUser = true;
+        hashedPasswordFile = config.age.secrets.hashedUserPassword.path;
         extraGroups = ifTheyExist [
           "wheel"
           "network"
