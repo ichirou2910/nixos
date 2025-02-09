@@ -30,6 +30,14 @@
     };
   };
 
+  programs.ssh = {
+    extraConfig = ''
+      Host github.com
+        IdentityFile ~/.ssh/id_ed25519
+    '';
+    startAgent = true;
+  };
+
   # Syncthing (common)
   services.syncthing = {
     enable = true;
