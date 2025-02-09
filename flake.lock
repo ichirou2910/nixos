@@ -73,11 +73,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1739002622,
-        "narHash": "sha256-PtJV5OYQF7XO6XkDYypsYJS3+OsgYaYSmkO3I/A7lZo=",
+        "lastModified": 1739051380,
+        "narHash": "sha256-p1QSLO8DJnANY+ppK7fjD8GqfCrEIDjso1CSRHsXL7Y=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "947eef9e99c42346cf0aac2bebe1cd94924c173b",
+        "rev": "5af1b9a0f193ab6138b89a8e0af8763c21bbf491",
         "type": "github"
       },
       "original": {
@@ -253,11 +253,11 @@
     "secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1739040509,
-        "narHash": "sha256-SELkRgNXW7h3P1bV1AqmYTmWL05SBu4zCAVOHM2rZOM=",
+        "lastModified": 1739069007,
+        "narHash": "sha256-8qtEeDBcat4Ssu6PUPGhOigclSUUPpwevjirfETnP70=",
         "ref": "main",
-        "rev": "2d012b11cb7ed2fc104b1ddd2ad3f4571819630b",
-        "revCount": 3,
+        "rev": "09d976cbdf28f565696635951b4aaa30720e76b5",
+        "revCount": 4,
         "type": "git",
         "url": "ssh://git@github.com/ichirou2910/nix-private.git"
       },

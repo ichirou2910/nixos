@@ -12,6 +12,19 @@
     ./nvidia.nix
   ];
 
+  age.secrets = {
+    syncthing_cert.file = "${inputs.secrets}/artemis_syncthing.cert.age";
+    syncthing_key.file = "${inputs.secrets}/artemis_syncthing.key.age";
+    kdeconnect_cert = {
+      file = "${inputs.secrets}/artemis_kdeconnect.cert.age";
+      path = "/home/ichirou/.config/kdeconnect/certificate.pem";
+    };
+    kdeconnect_key = {
+      file = "${inputs.secrets}/artemis_kdeconnect.key.age";
+      path = "/home/ichirou/.config/kdeconnect/privateKey.pem";
+    };
+  };
+
   nixpkgs.config.permittedInsecurePackages = [
     "dotnet-sdk-6.0.428"
   ];
@@ -58,8 +71,6 @@
   };
 
   # Syncthing (host specific)
-  age.secrets.syncthing_cert.file = "${inputs.secrets}/artemis_syncthing.cert.age";
-  age.secrets.syncthing_key.file = "${inputs.secrets}/artemis_syncthing.key.age";
   services.syncthing = {
     cert = config.age.secrets.syncthing_cert.path;
     key = config.age.secrets.syncthing_key.path;
