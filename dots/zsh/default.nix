@@ -41,12 +41,15 @@
       cat = "bat --paging=never --style=plain";
       tree = "exa --tree --icons";
       nd = "nix develop -c $SHELL";
-      rebuild = "sudo nixos-rebuild switch --flake $NIXOS_CONFIG_DIR --fast; notify-send 'Rebuild complete\!'";
       q = "exit";
 
       ls = "exa";
       ll = "exa -lh -g --icons";
       lla = "ll -a";
+
+      tas="tmux attach-session";
+      ta="tmux attach || tmux new-session";
+      td="tmux detach";
     };
 
     plugins = [
